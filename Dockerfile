@@ -7,9 +7,9 @@ ARG PYTHON_MAJOR_VERSION=3.7
 FROM debian:buster-20191224-slim as terraform
 ARG TERRAFORM_VERSION
 RUN apt-get update
-RUN apt-get install -y curl=7.64.0-4
-RUN apt-get install -y unzip=6.0-23+deb10u1
-RUN apt-get install -y gnupg=2.2.12-1+deb10u1
+RUN apt-get install -y curl
+RUN apt-get install -y unzip
+RUN apt-get install -y gnupg
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 RUN curl -Os https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_SHA256SUMS.sig
