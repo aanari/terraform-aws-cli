@@ -37,6 +37,7 @@ RUN apt-get update \
     git=1:2.20.1-2+deb10u1 \
     jq=1.5+dfsg-2+b1 \
     python3=${PYTHON_MAJOR_VERSION}.3-1 \
+    python3-pip=18.1-5 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && update-alternatives --install /usr/bin/python python /usr/bin/python${PYTHON_MAJOR_VERSION} 1
