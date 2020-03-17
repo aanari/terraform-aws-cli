@@ -33,6 +33,7 @@ FROM debian:buster-20191224-slim
 ARG PYTHON_MAJOR_VERSION
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
+    curl \
     ca-certificates=20190110 \
     git=1:2.20.1-2+deb10u1 \
     jq=1.5+dfsg-2+b1 \
